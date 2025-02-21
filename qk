@@ -1,0 +1,1022 @@
+hoja inicio
+
+
+$(Include=Include2.txt)
+
+
+SET ThousandSep='.';
+SET DecimalSep=',';
+SET MoneyThousandSep='.';
+SET MoneyDecimalSep=',';
+SET MoneyFormat='$ #.##0,00;-$ #.##0,00';
+SET TimeFormat='h:mm:ss';
+SET DateFormat='DD-MM-YYYY';
+SET TimestampFormat='DD-MM-YYYY h:mm:ss[.fff]';
+SET MonthNames='Ene;Feb;Mar;Abr;May;Jun;Jul;Ago;Sep;Oct;Nov;Dic';
+SET DayNames='Lun;Mar;Mié;Jue;Vie;Sáb;Dom';
+
+
+VCH:
+
+LOAD 
+
+numerosolicitud as NumeroSolicitud ,
+zona as Zona ,
+oficinanegocio as OficinaNegocio ,
+nombreoficinanegocio as NombreOficinaNegocio ,
+nombrenegocio as NombreNegocio ,
+negocio as Negocio ,
+subgerencia as Subgerencia ,
+traspasosupervisorasistentegestion_inicio as Traspasosupervisorasistentegestión_Inicio ,
+rutcliente as RutCliente ,
+rutclientedv as RutClienteDV ,
+nombrecliente as NombreCliente ,
+productooperativo as ProductoOperativo ,
+glosaproductocomercial as GlosaProductoComercial ,
+codigoproductocomercial as CodigoProductoComercial ,
+tipocarpeta as TipoCarpeta ,
+rutvendedor as RutVendedor ,
+digitoverificadorvendedor as DigitoVerificadorVendedor ,
+nombrevendedor as NombreVendedor ,
+nombreabogado as NombreAbogado ,
+nombreinmobiliaria as NombreInmobiliaria ,
+nombregarante as NombreGarante ,
+numeromutuo as NumeroMutuo ,
+fechacontabilizacion as FechaContabilizacion ,
+fechadesembolso as FechaDesembolso ,
+pago_inicio as Pago_Inicio ,
+pago_termino as Pago_Termino ,
+nombrecurse as NombreCurse ,
+nombrenotaria as NombreNotaria ,
+pagada as Pagada ,
+codigozona as CodigoZona ,
+nombrenotariasuf as NombreNotariaSUF ,
+montototal as MontoTotal ,
+fechacreacion as FechaCreacion ,
+fechapreaprobacion as FechaPreAprobacion ,
+fechaaprobacion as FechaAprobacion ,
+aprobada as Aprobada ,
+añocontabilizacion as AñoContabilizacion ,
+añodesembolso as AñoDesembolso ,
+añopreaprobacion as AñoPreAprobacion ,
+ciudadpropiedad as CiudadPropiedad ,
+codigocbr as CodigoCBR ,
+codigogarante as CodigoGarante ,
+comunapropiedad as ComunaPropiedad ,
+contabilizada as Contabilizada ,
+decretosupremo as DecretoSupremo ,
+destino as Destino ,
+estadopropiedad as EstadoPropiedad ,
+formalizada as Formalizada ,
+glosaetapaactual as GlosaEtapaActual ,
+hipoteca as Hipoteca ,
+mescontabilizacion as MesContabilizacion ,
+mesdesembolso as MesDesembolso ,
+mespreaprobacion as MesPreAprobacion ,
+montosolicitadopesos as MontoSolicitadoPesos ,
+montosolicitadouf as MontoSolicitadoUf ,
+nombrecbr as NombreCBR ,
+nombreoficina as NombreOficina ,
+nombreoficinacurse as NombreOficinaCurse ,
+notariasuf as NotariaSUF ,
+oficinacurse as OficinaCurse ,
+regionpropiedad as RegionPropiedad ,
+rutinmobiliaria as RutInmobiliaria ,
+dvinmobiliaria as DvInmobiliaria ,
+subsidio as Subsidio ,
+tipo as Tipo ,
+tipopropiedad as TipoPropiedad ,
+valorpropiedadpesos as ValorPropiedadPesos ,
+valorpropiedaduf as ValorPropiedadUf ,
+asistentedenegociosenviaoperacionacurse_inicio as AsistentedeNegociosenviaOperacionaCurse_Inicio ,
+asistentedenegociosenviaoperacionacurse_real as AsistentedeNegociosenviaOperacionaCurse_Real ,
+asistentedenegociosenviaoperacionacurse_real_corrido as AsistentedeNegociosenviaOperacionaCurse_Real_corrido ,
+asistentedenegociosenviaoperacionacurse_termino as AsistentedeNegociosenviaOperacionaCurse_Termino ,
+borradordeescritura_inicio as BorradordeEscritura_Inicio ,
+borradordeescritura_real as BorradordeEscritura_Real ,
+borradordeescritura_real_corrido as BorradordeEscritura_Real_corrido ,
+borradordeescritura_termino as BorradordeEscritura_Termino ,
+cierredecopias_inicio as CierredeCopias_Inicio ,
+cierredecopias_real as CierredeCopias_Real ,
+cierredecopias_real_corrido as CierredeCopias_Real_corrido ,
+cierredecopias_termino as CierredeCopias_Termino ,
+comitedecredito_inicio as ComitédeCrédito_Inicio ,
+comitedecredito_real as ComitédeCrédito_Real ,
+comitedecredito_real_corrido as ComitédeCrédito_Real_corrido ,
+comitedecredito_termino as ComitédeCrédito_Termino ,
+confecciondematrizdeescritura_inicio as ConfeccióndeMatrizdeescritura_Inicio ,
+confecciondematrizdeescritura_real as ConfeccióndeMatrizdeescritura_Real ,
+confecciondematrizdeescritura_real_corrido as ConfeccióndeMatrizdeescritura_Real_corrido ,
+confecciondematrizdeescritura_termino as ConfeccióndeMatrizdeescritura_Termino ,
+contabilizacion_inicio as Contabilización_Inicio ,
+contabilizacion_real as Contabilización_Real ,
+contabilizacion_real_corrido as Contabilización_Real_corrido ,
+contabilizacion_termino as Contabilización_Termino ,
+controldecredito_inicio as ControldeCrédito_Inicio ,
+controldecredito_real as ControldeCrédito_Real ,
+controldecredito_real_corrido as ControldeCrédito_Real_corrido ,
+controldecredito_termino as ControldeCrédito_Termino ,
+controldecreditocontabilizar_inicio as ControldeCréditoContabilizar_Inicio ,
+controldecreditocontabilizar_real as ControldeCréditoContabilizar_Real ,
+controldecreditocontabilizar_real_corrido as ControldeCréditoContabilizar_Real_corrido ,
+controldecreditocontabilizar_termino as ControldeCréditoContabilizar_Termino ,
+calculodecredito_inicio as CálculodeCrédito_Inicio ,
+calculodecredito_real as CálculodeCrédito_Real ,
+calculodecredito_real_corrido as CálculodeCrédito_Real_corrido ,
+calculodecredito_termino as CálculodeCrédito_Termino ,
+estudiodetitulo_inicio as EstudiodeTítulo_Inicio ,
+estudiodetitulo_real as EstudiodeTítulo_Real ,
+estudiodetitulo_real_corrido as EstudiodeTítulo_Real_corrido ,
+estudiodetitulo_termino as EstudiodeTítulo_Termino ,
+finiquito_inicio as Finiquito_Inicio ,
+finiquito_real as Finiquito_Real ,
+finiquito_real_corrido as Finiquito_Real_corrido ,
+finiquito_termino as Finiquito_Termino ,
+firmadelcomprador_inicio as FirmadelComprador_Inicio ,
+firmadelcomprador_real as FirmadelComprador_Real ,
+firmadelcomprador_real_corrido as FirmadelComprador_Real_corrido ,
+firmadelcomprador_termino as FirmadelComprador_Termino ,
+firmadelvendedor_inicio as FirmadelVendedor_Inicio ,
+firmadelvendedor_real as FirmadelVendedor_Real ,
+firmadelvendedor_real_corrido as FirmadelVendedor_Real_corrido ,
+firmadelvendedor_termino as FirmadelVendedor_Termino ,
+informadefirmadepartes_inicio as InformadeFirmadePartes_Inicio ,
+informadefirmadepartes_real as InformadeFirmadePartes_Real ,
+informadefirmadepartes_real_corrido as InformadeFirmadePartes_Real_corrido ,
+informadefirmadepartes_termino as InformadeFirmadePartes_Termino ,
+inscripcionencbr_inicio as InscripciónenCBR_Inicio ,
+inscripcionencbr_real as InscripciónenCBR_Real ,
+inscripcionencbr_real_corrido as InscripciónenCBR_Real_corrido ,
+inscripcionencbr_termino as InscripciónenCBR_Termino ,
+pago_real as Pago_Real ,
+pago_real_corrido as Pago_Real_corrido ,
+prefiniquito_inicio as PreFiniquito_Inicio ,
+prefiniquito_real as PreFiniquito_Real ,
+prefiniquito_real_corrido as PreFiniquito_Real_corrido ,
+prefiniquito_termino as PreFiniquito_Termino ,
+provisiondefondosparagastosoperacionales_inicio as ProvisióndefondosparaGastosoperacionales_Inicio ,
+provisiondefondosparagastosoperacionales_real as ProvisióndefondosparaGastosoperacionales_Real ,
+provisiondefondosparagastosoperacionales_real_corrido as ProvisióndefondosparaGastosoperacionales_Real_corrido ,
+provisiondefondosparagastosoperacionales_termino as ProvisióndefondosparaGastosoperacionales_Termino ,
+recibesolicitud_inicio as RecibeSolicitud_Inicio ,
+recibesolicitud_real as RecibeSolicitud_Real ,
+recibesolicitud_real_corrido as RecibeSolicitud_Real_corrido ,
+recibesolicitud_termino as RecibeSolicitud_Termino ,
+revisiondeabogado_inicio as Revisióndeabogado_Inicio ,
+revisiondeabogado_real as Revisióndeabogado_Real ,
+revisiondeabogado_real_corrido as Revisióndeabogado_Real_corrido ,
+revisiondeabogado_termino as Revisióndeabogado_Termino ,
+solicituddecredito_inicio as SolicituddeCrédito_Inicio ,
+solicituddecredito_real as SolicituddeCrédito_Real ,
+solicituddecredito_real_corrido as SolicituddeCrédito_Real_corrido ,
+solicituddecredito_termino as SolicituddeCrédito_Termino ,
+tasacion_inicio as Tasación_Inicio ,
+tasacion_real as Tasación_Real ,
+tasacion_real_corrido as Tasación_Real_corrido ,
+tasacion_termino as Tasación_Termino ,
+tramitacioncartaderesguardo_inicio as TramitaciónCartadeResguardo_Inicio ,
+tramitacioncartaderesguardo_real as TramitaciónCartadeResguardo_Real ,
+tramitacioncartaderesguardo_real_corrido as TramitaciónCartadeResguardo_Real_corrido ,
+tramitacioncartaderesguardo_termino as TramitaciónCartadeResguardo_Termino ,
+traspasosupervisorasistentegestion_real as Traspasosupervisorasistentegestión_Real ,
+traspasosupervisorasistentegestion_real_corrido as Traspasosupervisorasistentegestión_Real_corrido ,
+traspasosupervisorasistentegestion_termino as Traspasosupervisorasistentegestión_Termino ,
+visadocomercial_inicio as VisadoComercial_Inicio ,
+visadocomercial_real as VisadoComercial_Real ,
+visadocomercial_real_corrido as VisadoComercial_Real_corrido ,
+visadocomercial_termino as VisadoComercial_Termino ,
+numerocarpeta as NumeroCarpeta ,
+numeropiloto as NumeroPiloto ,
+enviaaabogadoinformate_inicio as EnvíaaAbogadoInformate_Inicio ,
+enviaaabogadoinformate_real as EnvíaaAbogadoInformate_Real ,
+enviaaabogadoinformate_real_corrido as EnvíaaAbogadoInformate_Real_corrido ,
+enviaaabogadoinformate_termino as EnvíaaAbogadoInformate_Termino ,
+tasa as Tasa ,
+comision as Comision ,
+plazo as Plazo ,
+tasavariable as TasaVariable ,
+periododegracia as PeriodoDeGracia ,
+mesessinvencimiento as MesesSinVencimiento ,
+rutejecutivoinmobiliaria as RutEjecutivoInmobiliaria ,
+tasamaximarenovacion as TasaMaximaRenovacion ,
+serie as Serie ,
+montocomplementariouf as MontoComplementarioUf ,
+finalizada as Finalizada ,
+indicadorabogado as IndicadorAbogado ,
+numerooperacioncomplementario as NumeroOperacionComplementario ,
+tipodesistida as TipoDesistida ,
+logindesistida as LoginDesistida ,
+estadodesistida as EstadoDesistida ,
+operaciondesistida_termino as OperaciónDesistida_Termino ,
+tasafinal as TasaFinal ,
+fechatasacion as FechaTasacion ,
+fechaescrituracion as FechaEscrituracion ,
+safe as SAFE ,
+codigonotaria as CodigoNotaria,
+' ' as   Dias_Habiles_contabilizacion_pago, 
+' ' as     Dias_Habiles_creacion_principiocurse, 
+' ' as     Dias_Habiles_escrituracion_contabilización, 
+' ' as    Dias_Habiles_principiocurse_finiquito, 
+' ' as      Dias_Habiles_principiocurse_pago, 
+' ' as    FirmaApoderadoBanco_Inicio, 
+' ' as    FirmaApoderadoBanco_Real, 
+ ' ' as   FirmaApoderadoBanco_Termino,
+' ' as EnvíaaAbogadoFiniquito_Inicio,
+' ' as EnvíaaAbogadoFiniquito_Real,
+' ' as EnvíaaAbogadoFiniquito_Real_corrido,
+' ' as EnvíaaAbogadoFiniquito_Termino,
+curse as Curse
+
+
+
+FROM
+\\Srv_recursos2\ftp\VenCreHip\FTP\Output\DAT_QLK_VCH.TXT
+(txt, codepage is 1252, embedded labels, delimiter is ';', msq);
+
+store * from VCH into Base QlikView2.txt (ansi, txt, delimiter is ';'); 
+
+drop table VCH;
+
+
+
+
+
+LET InicioRecarga = Now();
+
+LET vHoy= text(date(Now(),'YYYYMMDD'));
+
+First 1
+fec:
+LOAD FileTime() as FechaModificacion  FROM   [Base QlikView2.TXT]
+(txt, utf8, embedded labels, delimiter is ';', msq);
+
+
+LET vFecModificaTXT = text(date(Peek('FechaModificacion',0,'fec'),'YYYYMMDD')) ;
+
+DROP Table  fec;
+
+
+IF  $(vFecModificaTXT) <>  $(vHoy)  THEN
+
+Exit Script;
+
+END IF	;
+
+hoja srv curse
+
+[DatosSeguimiento2]:
+LOAD [Número de Solicitud] as solicitud, 
+     [Fecha Firma Banco] as FechaFirmaBancoSG
+FROM
+[Excepciones ProntoPago.xlsx]
+(ooxml, embedded labels, table is BajaProntoPago);
+
+
+hoja mapeo 
+Map_Fabrica:
+Mapping LOAD * INLINE [
+	Nombre, Fábrica
+	'Asicom', 'Fábrica Externa'
+	'Cibergestion', 'Fábrica Externa'
+	'gestio90', 'Fábrica Externa'
+	'Gestiona', 'Fábrica Externa'
+];
+
+Map_Fabrica2:
+Mapping LOAD * INLINE [
+	Nombre, Fábrica
+	'Asicom', 'Asicom'
+	'Cibergestion', 'Cibergestion'
+	'gestio90', 'Gestiona'
+	'Gestiona', 'Gestiona'
+];
+
+Map_CartaResg:
+Mapping LOAD * INLINE [
+	Cod, Carta
+	'', 'sin carta de resguardo'
+	'-1', 'sin carta de resguardo'
+	'0', 'sin carta de resguardo'
+	'12', 'sin carta de resguardo'
+];
+
+
+Map_BaseNacional:
+Mapping LOAD RUT as RutInmobiliaria2,	TIPO 
+FROM Semanas.xls (biff, embedded labels, table is [Base Nacional$]);
+
+Map_NegocioOficina:
+Mapping LOAD NombreNegocio, [N° ofi]
+FROM Semanas.xls (biff, embedded labels, table is [Hoja5$]);
+
+
+Map_FechaFirmaBanco:
+Mapping LOAD solicitud, FechaFirmaBancoSG  Resident DatosSeguimiento2;
+
+
+DROP Table DatosSeguimiento2;
+
+
+Map_OrdenMesDesmbolso:
+Mapping LOAD * INLINE
+[MesDesembolso2, orden
+ene,1
+feb,2
+mar,3
+abr,4
+may,5
+jun,6
+jul,7
+ago,8
+sep,9
+oct,10
+nov,11
+dic,12];
+
+
+EtapasActuales:
+LOAD GlosaEtapaActual2,
+	Area,
+	OrdenEtapas,
+	ListaParaPago
+FROM Semanas.xls (biff, embedded labels, table is [Hoja3$]);
+
+Map_AreaEtapa:
+Mapping LOAD GlosaEtapaActual2, Area RESIDENT EtapasActuales;
+	
+Map_OrdenEtapa:
+Mapping LOAD GlosaEtapaActual2, OrdenEtapas RESIDENT EtapasActuales;
+
+Map_ListaEtapa:
+Mapping LOAD GlosaEtapaActual2, ListaParaPago RESIDENT EtapasActuales;
+
+DROP TABLE EtapasActuales;
+
+Map_EstandarComercial:
+Mapping load * inline [
+C01, C02
+ACMA,10
+ACME,25
+AIMA,13
+AIME,25
+PCNMA,21
+PCNME,25
+PCSME,35
+PCSMA,27
+PSNMA,21
+PSNME,25
+PSSME,35
+PSSMA,30
+];
+
+Map_EstandarFabrica:
+Mapping load * inline [
+C03, C04
+ACMA,11
+ACME,15
+AIMA,15
+AIME,20
+PCNMA,90
+PCNME,105
+PCSME,125
+PCSMA,110
+PSNMA,63
+PSNME,75
+PSSME,95
+PSSMA,83
+];
+
+
+Map_EstandarTotal:
+Mapping LOAD
+	C05
+	,ApplyMap('Map_EstandarComercial', C05, 0) + ApplyMap('Map_EstandarFabrica', C05, 0) as C06
+;
+LOAD * Inline [
+C05
+ACMA
+ACME
+AIMA
+AIME
+PCNMA
+PCNME
+PCSME
+PCSMA
+PSNMA
+PSNME
+PSSME
+PSSMA
+];
+
+
+
+Map_CondicionEstandar:
+Mapping LOAD * INLINE [
+C11, C12
+ACMA, Asociada_TColectiva_MayorMontoUF_2000
+ACME, Asociada_TColectiva_MenorMontoUF_2000
+AIMA, Asociada_TIndivdual_MayorMontoUF_2000
+AIME, Asociada_TIndivdual_MenorMontoUF_2000
+PCNMA, Particular_ConCartaRsg_SinReparo_MayorMontoUF_2000
+PCNME, Particular_ConCartaRsg_SinReparo_MenorMontoUF_2000
+PCSME, Particular_ConCartaRsg_ConReparo_MenorMontoUF_2000
+PCSMA, Particular_ConCartaRsg_ConReparo_MayorMontoUF_2000
+PSNMA, Particular_SinCartaRsg_SinReparo_MayorMontoUF_2000
+PSNME, Particular_SinCartaRsg_SinReparo_MenorMontoUF_2000
+PSSME, Particular_SinCartaRsg_ConReparo_MenorMontoUF_2000
+PSSMA, Particular_SinCartaRsg_ConReparo_MayorMontoUF_2000
+];
+
+Map_CondicionEstandar2:
+Mapping LOAD * INLINE [
+C1, C2
+ACMA, 'Asociada Tasación Colectiva'
+ACME, 'Asociada Tasación Colectiva'
+AIMA, 'Asociada Tasación Individual'
+AIME, 'Asociada Tasación Individual'
+PCNMA, 'Particular Con Carta Resguardo Sin Reparo'
+PCNME, 'Particular Con Carta Resguardo Sin Reparo'
+PCSME, 'Particular Con Carta Resguardo Con Reparo'
+PCSMA, 'Particular Con Carta Resguardo Con Reparo'
+PSNMA, 'Particular Sin Carta Resguardo Sin Reparo'
+PSNME, 'Particular Sin Carta Resguardo Sin Reparo'
+PSSME, 'Particular Sin Carta Resguardo Con Reparo'
+PSSMA, 'Particular Sin Carta Resguardo Con Reparo'
+];
+
+Map_CondicionEstandar3:
+Mapping LOAD * INLINE [
+C21, C22
+ACMA, 'Asociada Tasación Colectiva'
+ACME, 'Asociada Tasación Colectiva'
+AIMA, 'Asociada Tasación Individual'
+AIME, 'Asociada Tasación Individual'
+PCNMA, 'Particular Con Carta Resguardo'
+PCNME, 'Particular Con Carta Resguardo'
+PCSME, 'Particular Con Carta Resguardo'
+PCSMA, 'Particular Con Carta Resguardo'
+PSNMA, 'Particular Sin Carta Resguardo'
+PSNME, 'Particular Sin Carta Resguardo'
+PSSME, 'Particular Sin Carta Resguardo'
+PSSMA, 'Particular Sin Carta Resguardo'
+];
+
+
+
+
+Rng_NoCont:
+LOAD * INLINE [
+	iNoConta, fNoConta, RangoNoContabilizado
+	0, 10, 0-10
+	11, 20, 11-20
+	21, 25, 21-25
+	26, 30, 26-30
+	31, 40, 31-40
+	41, 50, 41-50
+	51, 60, 51-60
+	61, 65, 61-65
+	66, , 65<
+];
+
+Rng_Cumple:
+LOAD * INLINE [
+	iCumple, fCumple, Cumple65Dias
+	0, 65, 'Cumple'
+	66, , 'No Cumple'
+];
+
+Rng_NoPag:
+LOAD * INLINE [
+	iNoPag, fNoPag, RangoNoPagado
+	0, 20, 0-20
+	21, 30, 21-30
+	31, 40, 31-40
+	41, 50, 41-50
+	51, 60, 51-60
+	61, 65, 61-65
+	66, , 65<
+];
+
+hoja archivos LET valorUFTope = 2000;
+LET FechaTope = '01-12-2011';
+LET FechaReparoConsolidado = '20-11-2011';
+
+
+Map_ExcepcionesProntoPago:
+Mapping LOAD Nro.Solicitud, 'producto ProntoPago' as GlosaPrdPtoPgo
+FROM
+[Excepciones ProntoPago.xlsx]
+(ooxml, embedded labels, table is Incluir);
+
+
+Map_ExcepcionesProntoPagoFinanciamiento:
+Mapping LOAD Nro.Solicitud, TipoFinanciamiento as GlosaPrdPtoPgo
+FROM
+[Excepciones ProntoPago.xlsx]
+(ooxml, embedded labels, table is Incluir);
+
+Map_FechaDesembolso:
+Mapping LOAD Nro.Sol, F.Desem
+FROM [Excepciones ProntoPago.xlsx] (ooxml, embedded labels, table is FechaDesembolso);
+
+
+InmobiliariasProntoPago:
+LOAD GRUPO as GrupoInmobiliariaProntoPago, 
+     INMOBILIARIA as NombreInmobiliariaProntoPago, 
+     RUT as RutInmobiliariaProntoPago, 
+     RUT as RutConvenioProntoPago, 
+     DV as DvRutInmobiliariaProntoPago,
+     CUPO as CupoInmobiliariaProntoPago
+FROM
+InmobiliariasProntoPago.xls
+(biff, embedded labels, table is Hoja1$)
+WHERE VIGENCIA = 1;
+
+Map_MarcaInmobiliaria:
+Mapping LOAD RutInmobiliariaProntoPago, 'con convenio' as MarcaPrtPgo Resident InmobiliariasProntoPago;
+
+Map_GrupoInmobiliario:
+Mapping LOAD RutInmobiliariaProntoPago, GrupoInmobiliariaProntoPago Resident InmobiliariasProntoPago;
+
+
+Sucursales:
+LOAD 
+	SUC_COD as SUC_COD2
+	,SUC_OFI
+	,[NUEVA  SUC_SBG]
+	,SUC_ZNA
+	,[CON CURSE]
+FROM [datos de zonas y subgerencias actualizado con comuna.xls] (biff, embedded labels, table is [Hoja1$]);
+
+
+VCH:
+LOAD
+	*
+	,If(OrdenEtapas = 0, OperaciónDesistida_Termino,
+	  If(OrdenEtapas = 1, SolicituddeCrédito_Inicio,
+	   If(OrdenEtapas = 2, ComitédeCrédito_Inicio,
+		If(OrdenEtapas = 3, ProvisióndefondosparaGastosoperacionales_Inicio,
+		 If(OrdenEtapas = 4, AsistentedeNegociosenviaOperacionaCurse_Inicio,
+		  If(OrdenEtapas = 5, Traspasosupervisorasistentegestión_Inicio,
+		   If(OrdenEtapas = 6, Tasación_Inicio,
+			If(OrdenEtapas = 7, EstudiodeTítulo_Inicio,
+			 If(OrdenEtapas = 8, CálculodeCrédito_Inicio,
+			  If(OrdenEtapas = 9, VisadoComercial_Inicio,
+			   If(OrdenEtapas = 10, ControldeCrédito_Inicio,
+				If(OrdenEtapas = 11, EnvíaaAbogadoInformate_Inicio,
+				 If(OrdenEtapas = 12, BorradordeEscritura_Inicio,
+				  If(OrdenEtapas = 13, ConfeccióndeMatrizdeescritura_Inicio,
+				   If(OrdenEtapas = 14, FirmadelComprador_Inicio,
+				    If(OrdenEtapas = 15, ControldeCréditoContabilizar_Inicio,
+					 If(OrdenEtapas = 16, Contabilización_Inicio,
+					  If(OrdenEtapas = 17, FirmadelVendedor_Inicio,
+					   If(OrdenEtapas = 18, InformadeFirmadePartes_Inicio,
+						If(OrdenEtapas = 19, TramitaciónCartadeResguardo_Inicio,
+						 If(OrdenEtapas = 20, Revisióndeabogado_Inicio,
+						  If(OrdenEtapas = 21, CierredeCopias_Inicio,
+						   If(OrdenEtapas = 23, InscripciónenCBR_Inicio, 
+							If(OrdenEtapas = 24, Finiquito_Inicio,
+							 If(OrdenEtapas = 25, VentadeLetras_Inicio,
+							  If(OrdenEtapas = 26, Pago_Inicio,Null())))))))))))))))))))))))))) as FechaUltimoEventoVCH
+;
+LOAD
+	*
+	,if(TipoCarpeta='Asociada',DiasCurseFirmaHabiles,DiasCursePagoHabiles) as DiasCurseHitoFabricaHabil
+	,if(TipoCarpeta='Asociada', DiasCurseFirmaCorridos, DiasCursePago) as DiasCurseHitoFabricaCorri
+	,if(TipoCarpeta='Asociada', DiasCurseFirmaCorridos, DiasCursePago) as CurseHitoFabrica
+	,if(TipoCarpeta='Asociada',DiasCreaciónFirmaHabiles,DiasCreaciónPagoHabiles) as DiasCreacionHitoFabricaHabil
+	,if(TipoCarpeta='Asociada', DiasCreacionFirmaCorridos, DiasCorridosCreacionPago) as DiasCreaciónHitoFabricaCorri
+	,if(TipoCarpeta='Asociada', DiasCreacionFirmaCorridos, DiasCorridosCreacionPago) as CreaciónHitoFabrica
+
+;
+LOAD
+	*
+	,ApplyMap('Map_EstandarComercial', CodigosEstandar, 'Sin Estandar') as EstandarComercial
+	,ApplyMap('Map_EstandarFabrica', CodigosEstandar, 'Sin Estandar') as EstandarFábrica
+	,ApplyMap('Map_EstandarTotal', CodigosEstandar, 'Sin Estandar') as EstandarTotal
+	,ApplyMap('Map_CondicionEstandar', CodigosEstandar, 'Sin Estandar') as EstandarGlosa
+	,ApplyMap('Map_CondicionEstandar2', CodigosEstandar, 'Sin Estandar') as EstandarGlosa2
+	,ApplyMap('Map_CondicionEstandar3', CodigosEstandar, 'Sin Estandar') as EstandarGlosa3
+	,NetWorkDays(FechaCreacion, FechaReingreso, $(vFeriados)) as DiasCreaciónCurseHabiles
+	,NetWorkDays(FechaReingreso, FirmadelComprador_Inicio, $(vFeriados)) as DiasCurseFirmaHabiles
+	,NetWorkDays(FechaReingreso, FechaDesembolso,  $(vFeriados)) as DiasCursePagoHabiles
+	,NetWorkDays(FechaCreacion, FirmadelComprador_Inicio, $(vFeriados)) as DiasCreaciónFirmaHabiles
+	,NetWorkDays(FechaCreacion, FechaDesembolso, $(vFeriados)) as DiasCreaciónPagoHabiles
+	,NetWorkDays(Contabilización_Termino, today(), $(vFeriados)) as DiasContabilizaciónALaFecha
+	,FechaReingreso - FechaCreacion as DiasCreacionCurseCorridos
+	,FirmadelComprador_Inicio - FechaReingreso as DiasCurseFirmaCorridos
+	,FirmadelComprador_Inicio - FechaCreacion as DiasCreacionFirmaCorridos
+	,If(IsNum(FechaInicioProntoPago), 'Si', 'No') as InicioProntoPago
+;
+LOAD
+	*
+	,if(TipoCarpeta = 'Asociada', 'A', 'P') & 
+	 if(TipoCarpeta = 'Asociada', 
+	 	Upper(left(CartaResguardo, 1))) &
+	 if(TipoCarpeta = 'Asociada', '') &
+	 if(MontoTope='Menor2000', 'ME', 'MA') as CodigosEstandar
+	,monthname(if(TipoCarpeta='Asociada', FirmadelComprador_Inicio, FechaDesembolso)) as MesAñoFechaHitoFinal
+	,if(TipoCarpeta='Asociada', FirmadelComprador_Inicio, FechaDesembolso) as FechaHitoFinal
+	,if(TipoCarpeta='Asociada', FirmadelComprador_Inicio, FechaDesembolso) as FechaHitoFinal2
+	,if(TipoCarpetaVCH='Asociada', FirmadelComprador_Inicio, FechaDesembolso) as FechaHitoFinalVCH
+
+	
+	,if(MarcaVendedorProntoPago = 'sin convenio', if(MarcaInmobiliariaProntoPago = 'con convenio', MarcaInmobiliariaProntoPago, MarcaVendedorProntoPago),MarcaVendedorProntoPago ) as MarcaProntoPagoConsolidada
+	
+
+	,if(TipoFinanciamientoProntoPago = 'Financiamiento Bech', if(IsNum(FirmadelComprador_Inicio), FirmadelComprador_Inicio, Null()),
+		if(TipoFinanciamientoProntoPago = 'Financiamiento Otro Banco' or TipoFinanciamientoProntoPago = 'Recursos Propios', if(isnum(FirmadelVendedor_Inicio), FirmadelVendedor_Inicio, Null()), Null())) as FechaInicioProntoPago
+	,GlosaEtapaActual/*)*/ as GlosaEtapaActual2
+	,if(GlosaEtapaActual = 'Operación Desistida' , 'Desistida', 'Vigente') as VigenciaOperación
+;
+
+LOAD
+	*
+	,If(isNull(ExcepcionProntoPago)	,if(wildmatch(GlosaProductoComercial, '*Pront*pag*')> 0,'producto ProntoPago', 'otro producto'), ExcepcionProntoPago) as TipoProductoProntoPago
+	
+    ,ApplyMap('Map_ExcepcionesProntoPagoFinanciamiento', NumeroSolicitud,   
+	    If(WildMatch(GlosaProductoComercial, '*otros b*cos*') > 0, 'Financiamiento Otro Banco', 
+	     	If(WildMatch(GlosaProductoComercial, '*Fin*Bech*') > 0, 'Financiamiento Bech', 
+	     		If(Wildmatch(GlosaProductoComercial, '*Rec*Prop*')> 0, 'Recursos Propios', 'Otro Financiamiento')))) AS TipoFinanciamientoProntoPago,
+	
+	ApplyMap('Map_MarcaInmobiliaria', RutInmobiliaria, 'sin convenio') as MarcaInmobiliariaProntoPago,
+	ApplyMap('Map_MarcaInmobiliaria', RutVendedor, 'sin convenio') as MarcaVendedorProntoPago,
+	
+	if(not IsNull(RutVendedor), RutVendedor, if(not IsNull(RutInmobiliaria), RutInmobiliaria, RutVendedor)) as RutConvenioProntoPago;
+
+LOAD distinct 
+	NumeroSolicitud, 
+	NumeroSolicitud as NumeroSolicitud5,
+	NumeroSolicitud as [N° VCH],
+	Zona,
+	OficinaNegocio as SUC_COD ,
+	OficinaNegocio,
+	NombreOficinaNegocio,
+	NombreNegocio,
+	Negocio,
+	if(Zona<>'METRO' AND ApplyMap('Map_Fabrica', NombreAbogado, Null()) = 'Fábrica Externa', 'xx',
+		if(OficinaNegocio='04' and FechaCreacion >'31-12-2007',
+			ApplyMap('Map_NegocioOficina', NombreNegocio, Null()),
+			OficinaNegocio)) as SUC_COD2,
+
+
+ Traspasosupervisorasistentegestión_Inicio/*))*/ as FechaReingreso,
+ Traspasosupervisorasistentegestión_Inicio/*)*/ as DiasCursePago,
+	
+	
+
+	
+	ApplyMap('Map_FechaFirmaBanco', NumeroSolicitud, 'Sin Fecha') as FechaFirmaBancoSUF,
+
+
+	
+
+
+	ApplyMap('Map_GrupoInmobiliario', Null()) as GrupoInmobiliariaProntoPagoMapeado,
+
+	Subgerencia,
+	Traspasosupervisorasistentegestión_Inicio,
+	month(Traspasosupervisorasistentegestión_Inicio) as mesenvio,
+	year(Traspasosupervisorasistentegestión_Inicio) as añoenvio,
+	MonthName(Traspasosupervisorasistentegestión_Inicio) as AñoMesEmvioCurse,
+	RutCliente,
+	RutClienteDV,
+	NombreCliente,
+	ProductoOperativo,
+	GlosaProductoComercial,
+	CodigoProductoComercial,
+	TipoCarpeta as TipoCarpetaVCH,
+	RutVendedor,
+	ApplyMap('Map_BaseNacional', RutVendedor, Null()) as TipoInmobiliarias2,
+	if(RutVendedor >'50000000', 'Asociada','Particular') as TipoCarpetaporRutVend,
+	DigitoVerificadorVendedor,
+	NombreVendedor as NombreVendedorVCH,
+	if(NombreAbogado='gestio90','Gestiona',NombreAbogado) as NombreAbogado,
+	ApplyMap('Map_Fabrica', NombreAbogado, 'Fábrica Interna') as TipoFabrica,
+	ApplyMap('Map_Fabrica2', NombreAbogado, 'Fábrica Interna') as TipoFabrica2,
+	if(ApplyMap('Map_Fabrica', NombreAbogado, 'Fábrica Interna') = 'Fábrica Interna', 'Fábrica Interna',  if((NumeroPiloto & NumeroCarpeta <> ''), 'F. Externa Asociada','F. Externa Particular')) as TipoFabrica3,
+	'Fábrica Hipotecaria' as TipoFabrica1,
+	NombreInmobiliaria,
+	NombreGarante,
+	NumeroMutuo,
+	FechaContabilizacion,
+	FechaContabilizacion as FechaContabilizacionSemana,
+	if(FechaContabilizacion>'0','Contabilizada','No Contabilizada') as Contabilización,
+	MonthName(FechaContabilizacion) as AñoMesContabilización,
+	ApplyMap('Map_FechaDesembolso', NumeroSolicitud, FechaDesembolso) as FechaDesembolso,
+	ApplyMap('Map_FechaDesembolso', NumeroSolicitud, FechaDesembolso) as FechaPagoSemana,
+	MonthName(FechaDesembolso) as AñoMesDesembolso,
+	Pago_Inicio,
+	Pago_Termino,
+	NombreCurse as NombreCurse,
+	NombreNotaria,
+	Pagada,
+	CodigoZona,
+	NombreNotariaSUF,
+	MontoTotal,
+	FechaCreacion,
+	year(FechaCreacion) as AñoCreacion,
+	month(FechaCreacion) as MesCreacion,
+	FechaPreAprobacion,
+	FechaAprobacion,
+	Aprobada,
+	AñoContabilizacion,
+	AñoDesembolso,
+	AñoPreAprobacion,
+	CiudadPropiedad,
+	CodigoCBR,
+	CodigoGarante,
+	CodigoGarante as CodigoGarante2,
+	if(CodigoGarante='','NO','SI') as Garante,
+	ApplyMap('Map_CartaResg', CodigoGarante, 'con carta de resguardo') as CartaResguardo,
+	ComunaPropiedad,
+	Contabilizada,
+	DecretoSupremo,
+	Destino,
+	EstadoPropiedad,
+	Formalizada,
+	GlosaEtapaActual,	
+	ApplyMap('Map_AreaEtapa', GlosaEtapaActual, null()) AS Area,
+	ApplyMap('Map_OrdenEtapa', GlosaEtapaActual, null()) AS OrdenEtapas,
+	ApplyMap('Map_ListaEtapa', GlosaEtapaActual, null()) AS ListaParaPago,
+	
+		
+	if(wildmatch( GlosaProductoComercial, '*RECEP*')='1', 'Recepción Futura', 'Recepción Normal') as RecepcionFutura,
+	if(wildmatch( GlosaProductoComercial, '*AGE*')='1' or NombreAbogado='Agencias' or GlosaEtapaActual='Operación Desistida' ,'Agencia', 'No Agencia') as OrigenProducto,
+	if(wildmatch( Upper(GlosaProductoComercial), '*REF*')='1','Refinanciamiento', 'Financiamiento') as TipoFinanciamiento,
+	if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio') as TipoConvenio,
+	if(RutVendedor >'50000000' and (if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio'))='Con Convenio' ,'Asociada','Particular') as TipoCarpeta,
+	
+	if(wildmatch( Upper(GlosaProductoComercial), '*DE SUBV*')='1' 
+	or wildmatch( Upper(GlosaProductoComercial), '*CON SUBV*')='1' 
+	,'con subvencion', 'sin subvencion') as TipoSubvencion,
+
+	ApplyMap('Map_ExcepcionesProntoPago', NumeroSolicitud, Null()) as ExcepcionProntoPago,
+	
+	
+	Hipoteca,
+	MesContabilizacion,
+	MesDesembolso,
+	MesPreAprobacion,
+	MontoSolicitadoPesos,
+	MontoSolicitadoUf,
+	
+
+	if(TipoCarpeta = 'Asociada',
+		if(FirmadelComprador_Inicio < '$(FechaTope)',
+			 'Menor2000', 
+			 if(MontoTotal <= $(valorUFTope), 
+			 	'Menor2000', 
+			 	'Mayor2000')
+			)
+		,if(FechaDesembolso < '$(FechaTope)',
+			 'Menor2000', 
+			 if(MontoTotal <= $(valorUFTope), 
+			 	'Menor2000', 
+			 	'Mayor2000')
+			)
+		) as MontoTope,
+	
+	NombreCBR,
+	NombreOficina,
+	NombreOficinaCurse,
+	NotariaSUF,
+	OficinaCurse,
+	RegionPropiedad,
+	RutInmobiliaria,
+	DvInmobiliaria,
+	Subsidio,
+	Tipo,
+	TipoPropiedad,
+	ValorPropiedadPesos,
+	ValorPropiedadUf,
+	AsistentedeNegociosenviaOperacionaCurse_Inicio,
+	AsistentedeNegociosenviaOperacionaCurse_Real,
+	AsistentedeNegociosenviaOperacionaCurse_Real_corrido,
+	AsistentedeNegociosenviaOperacionaCurse_Termino,
+	BorradordeEscritura_Inicio,
+	BorradordeEscritura_Real,
+	BorradordeEscritura_Real_corrido,
+	BorradordeEscritura_Termino,
+	CierredeCopias_Inicio,
+	if(CierredeCopias_Inicio>'0','Si','No') as InicioCierredeCopias,
+	CierredeCopias_Real,
+	CierredeCopias_Real_corrido,
+	CierredeCopias_Termino,
+	if(CierredeCopias_Termino>'0','Si','No') as TerminoCierredeCopias,
+	ComitédeCrédito_Inicio,
+	ComitédeCrédito_Real,
+	ComitédeCrédito_Real_corrido,
+	ComitédeCrédito_Termino,
+	ConfeccióndeMatrizdeescritura_Inicio,
+	ConfeccióndeMatrizdeescritura_Real,
+	ConfeccióndeMatrizdeescritura_Real_corrido,
+	ConfeccióndeMatrizdeescritura_Termino,
+	Contabilización_Inicio,
+	Contabilización_Real,
+	Contabilización_Real_corrido,
+	Contabilización_Termino,
+	ControldeCrédito_Inicio,
+	ControldeCrédito_Real,
+	ControldeCrédito_Real_corrido,
+	ControldeCrédito_Termino,
+	ControldeCréditoContabilizar_Inicio,
+	ControldeCréditoContabilizar_Real,
+	ControldeCréditoContabilizar_Real_corrido,
+	ControldeCréditoContabilizar_Termino,
+	CálculodeCrédito_Inicio,
+	CálculodeCrédito_Real,
+	CálculodeCrédito_Real_corrido,
+	CálculodeCrédito_Termino,
+	EnvíaaAbogadoInformate_Inicio,
+	EnvíaaAbogadoInformate_Real,
+	EnvíaaAbogadoInformate_Real_corrido,
+	EnvíaaAbogadoInformate_Termino,
+	EstudiodeTítulo_Inicio,
+	EstudiodeTítulo_Real,
+	EstudiodeTítulo_Real_corrido,
+	EstudiodeTítulo_Termino,
+	MonthName(EstudiodeTítulo_Termino) as AñoMesTerminoEstudiodeTítulo,
+	if(EstudiodeTítulo_Real_corrido>'15','Si','No') as  EstudioTitulosMayor15Dias,
+	Finiquito_Inicio,	
+	Finiquito_Real,
+	Finiquito_Real_corrido,
+	Finiquito_Termino,
+	if(Finiquito_Termino>'0','con finiquito', 'sin finiquito') as Finiquito, 
+	year(Finiquito_Termino) as AñoFiniquito,
+	month(Finiquito_Termino) as MesFiniquito,
+	if(Finiquito_Termino>'0','Con Finiquito','Sin Finiquito') as ConFiniquito,
+	FirmadelComprador_Inicio,
+	FirmadelComprador_Inicio as FirmadelComprador_InicioSemana,
+	MonthName(FirmadelComprador_Inicio) as AñoMesFirmaComprador,
+	if(FirmadelComprador_Inicio>'0','Si','No') as InicioFirmaComprador,
+	FirmadelComprador_Real,
+	FirmadelComprador_Real_corrido,
+	FirmadelComprador_Termino,
+	if(FirmadelComprador_Termino>'0','Si','No') as TerminoFirmaComprador,
+	if(FirmadelComprador_Termino>'0','Si','No') as FirmaComprador,
+	today(3)-FirmadelComprador_Termino as DíasCorridosFirmaCompradorFechaActual,
+	FirmadelVendedor_Inicio,
+	if(FirmadelVendedor_Inicio>'0','Si','No') as InicioFirmaVendedor,
+	FirmadelVendedor_Real,
+	FirmadelVendedor_Real_corrido,
+	FirmadelVendedor_Termino,
+	MonthName(FirmadelVendedor_Termino) as AñoMesFirmaVendedorTermino,
+	if(FirmadelVendedor_Termino>'0','Si','No') as TerminoFirmaVendedor,
+	if(FirmadelVendedor_Termino>'0','Si','No') as FirmaVendedor,
+	FirmadelVendedor_Termino-FirmadelComprador_Inicio as TiempoFirmaCompradorVendedorCorrido,
+	FirmadelVendedor_Termino-FirmadelComprador_Termino as TiempoFirmaCompradorVendedorCorrido2,
+	if(FirmadelVendedor_Termino-FirmadelComprador_Inicio<0,'SI','NO') as VendedorAntesComprador,
+	InformadeFirmadePartes_Inicio,
+	InformadeFirmadePartes_Real,
+	InformadeFirmadePartes_Real_corrido,
+	InformadeFirmadePartes_Termino,
+	InscripciónenCBR_Inicio,
+	if(InscripciónenCBR_Inicio>'0','Si','No') as InicioCBR,
+	InscripciónenCBR_Real,
+	InscripciónenCBR_Real_corrido,
+	InscripciónenCBR_Termino,
+	if(InscripciónenCBR_Termino>'0','Si','No') as TérminoCBR,
+	Pago_Real,
+	Pago_Real_corrido,
+	PreFiniquito_Inicio,
+	PreFiniquito_Real,
+	PreFiniquito_Real_corrido,
+	PreFiniquito_Termino,
+	ProvisióndefondosparaGastosoperacionales_Inicio,
+	ProvisióndefondosparaGastosoperacionales_Real,
+	ProvisióndefondosparaGastosoperacionales_Real_corrido,
+	ProvisióndefondosparaGastosoperacionales_Termino,
+	RecibeSolicitud_Inicio,
+	RecibeSolicitud_Real,
+	RecibeSolicitud_Real_corrido,
+	RecibeSolicitud_Termino,
+	Revisióndeabogado_Inicio,
+	Revisióndeabogado_Real,
+	Revisióndeabogado_Real_corrido,
+	Revisióndeabogado_Termino,
+	SolicituddeCrédito_Inicio,
+	SolicituddeCrédito_Real,
+	SolicituddeCrédito_Real_corrido,
+	SolicituddeCrédito_Termino,
+	Tasación_Inicio,
+	Tasación_Real,
+	Tasación_Real_corrido,
+	Tasación_Termino,
+	TramitaciónCartadeResguardo_Inicio,
+	TramitaciónCartadeResguardo_Real,
+	TramitaciónCartadeResguardo_Real_corrido,
+	TramitaciónCartadeResguardo_Termino,
+	MonthName(TramitaciónCartadeResguardo_Termino) as AñoMesTramitaciónCartaResguardoTérmino,
+	Traspasosupervisorasistentegestión_Real,
+	Traspasosupervisorasistentegestión_Real_corrido,
+	Traspasosupervisorasistentegestión_Termino,
+	'' as VentadeLetras_Inicio,
+	'' as VentadeLetras_Real,
+	'' as VentadeLetras_Real_corrido,
+	'' as VentadeLetras_Termino,
+	VisadoComercial_Inicio,
+	VisadoComercial_Real,
+	VisadoComercial_Real_corrido,
+	VisadoComercial_Termino,
+	NumeroCarpeta,
+	NumeroPiloto as NumeroPilotoVCH,
+	if(NumeroPiloto='Solo Etapas',NumeroCarpeta,NumeroPiloto) as NumeroPiloto,
+	if(RutVendedor >'50000000' and NumeroPiloto<>'' and NumeroCarpeta<>'','Asociada',
+	if(RutVendedor <'50000000' and NumeroPiloto<>'' and NumeroCarpeta<>'','Asociada','Particular')) as TipoCarpetaAntiguo,	
+	Tasa,
+ 	TasaVariable,
+ 	TipoDesistida,
+ 	OperaciónDesistida_Termino,
+ 	TasaFinal,
+	FechaTasacion,
+	if(FechaTasacion >'0','Si','No') as Tasacion,
+	FechaEscrituracion,
+	SAFE,
+	Curse,
+	Comision,
+	Plazo,
+	CodigoNotaria,
+	PeriodoDeGracia,
+	MesesSinVencimiento,
+	RutEjecutivoInmobiliaria,
+	TasaMaximaRenovacion,
+	Serie,
+	MontoComplementarioUf,
+	Finalizada,
+	NombreVendedor,
+	IndicadorAbogado,
+	NumeroOperacionComplementario,
+	//EnvíaaAbogadoFiniquito_Inicio,
+	
+	
+ 	if(Zona='METRO' and RutVendedor >'50000000', 'RM-Asociada',
+	if(Zona='METRO' and RutVendedor <'50000000', 'RM-Particular',
+	if(Zona='NORTE' and RutVendedor >'50000000', 'REGIONES-Asociada',
+	if(Zona='NORTE' and RutVendedor <'50000000', 'REGIONES-Particular',
+	if(Zona='SUR' and RutVendedor >'50000000', 'REGIONES-Asociada',
+	if(Zona='SUR' and RutVendedor <'50000000', 'REGIONES-Particular')))))) as ZonaTipoCarpeta,
+	if(Pagada='Si',(Pago_Termino-FechaCreacion)) as DiasCorridosCreacionPago,
+	today(3)-FechaCreacion as DiasCorridosCreacionFechaActual,
+	if(Pagada='Si'and (FechaDesembolso-FechaCreacion)< '91', 'Cumple', 
+	if(Pagada='Si'and (FechaDesembolso-FechaCreacion)> '90','No Cumple',
+	if(Pagada='No'and (today(3)-FechaCreacion)< '91','Cumple',
+	if(Pagada='No'and (today(3)-FechaCreacion)> '90','No Cumple')))) as Cumple90Dias,
+	if(GlosaEtapaActual='Traspaso supervisor - asistente gestión',Traspasosupervisorasistentegestión_Inicio,
+	if(GlosaEtapaActual='Tasación',Tasación_Inicio,
+	if(GlosaEtapaActual='Estudio de Título',EstudiodeTítulo_Inicio,
+	if(GlosaEtapaActual='Cálculo de Crédito',CálculodeCrédito_Inicio,
+	if(GlosaEtapaActual='Visado Comercial',VisadoComercial_Inicio,
+	if(GlosaEtapaActual='Control de Crédito',ControldeCrédito_Inicio,
+	if(GlosaEtapaActual='Envía a Abogado Informate',EnvíaaAbogadoInformate_Inicio,
+	if(GlosaEtapaActual='Borrador de Escritura',BorradordeEscritura_Inicio,
+	if(GlosaEtapaActual='Confección de Matriz de escritura',ConfeccióndeMatrizdeescritura_Inicio,
+	if(GlosaEtapaActual='Firma del Comprador',FirmadelComprador_Inicio,
+	if(GlosaEtapaActual='Control de Crédito (Contabilizar)',ControldeCréditoContabilizar_Inicio,
+	if(GlosaEtapaActual='Contabilización',Contabilización_Inicio,
+	if(GlosaEtapaActual='Firma del Vendedor',FirmadelVendedor_Inicio,
+	if(GlosaEtapaActual='Informa de Firma de Partes',InformadeFirmadePartes_Inicio,
+	if(GlosaEtapaActual='Tramitación Carta de Resguardo',TramitaciónCartadeResguardo_Inicio,
+	if(GlosaEtapaActual='Revisión de abogado',Revisióndeabogado_Inicio,
+	if(GlosaEtapaActual='PreFiniquito',PreFiniquito_Inicio,
+	if(GlosaEtapaActual='Cierre de Copias',CierredeCopias_Inicio,
+	if(GlosaEtapaActual='Inscripción en CBR',InscripciónenCBR_Inicio,
+	if(GlosaEtapaActual='Finiquito',Finiquito_Inicio,
+	if(GlosaEtapaActual='Pago',Pago_Inicio))))))))))))))))))))) as FechaInicioEtapaActual,
+	
+	
+	if((isnull(PreFiniquito_Inicio) or PreFiniquito_Inicio='') and FechaDesembolso<Finiquito_Inicio ,FechaDesembolso,
+		if((isnull(PreFiniquito_Inicio) or PreFiniquito_Inicio='') and FechaDesembolso>=Finiquito_Inicio,Finiquito_Inicio,
+			PreFiniquito_Inicio)) as FechaLiberacionFondos, 
+
+	
+	
+	if(wildmatch( GlosaProductoComercial, '*REF*')='1' and CodigoGarante='12', 'Refinanciamiento Interno',
+	if(wildmatch( GlosaProductoComercial, '*REF*')='1' and CodigoGarante<>'12', 'Refinanciamiento Otras Instituciones',
+	if(wildmatch( GlosaProductoComercial, '*REF*')='0' and (if(RutVendedor >'50000000' and (if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio'))='Con Convenio' ,'Asociada','Particular'))='Asociada' 
+	and (if(CodigoGarante='' or CodigoGarante='-1' or CodigoGarante='0' or CodigoGarante='12','sin carta de resguardo','con carta de resguardo'))= 'con carta de resguardo', 'Asociada Con Carta de Resguardo',
+	if(wildmatch( GlosaProductoComercial, '*REF*')='0' and (if(RutVendedor >'50000000' and (if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio'))='Con Convenio' ,'Asociada','Particular'))='Asociada' 
+	and (if(CodigoGarante='' or CodigoGarante='-1' or CodigoGarante='0' or CodigoGarante='12','sin carta de resguardo','con carta de resguardo'))= 'sin carta de resguardo', 'Asociada Sin Carta de Resguardo',
+	if(wildmatch( GlosaProductoComercial, '*REF*')='0' and (if(RutVendedor >'50000000' and (if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio'))='Con Convenio' ,'Asociada','Particular'))='Particular' 
+	and (if(CodigoGarante='' or CodigoGarante='-1' or CodigoGarante='0' or CodigoGarante='12','sin carta de resguardo','con carta de resguardo'))= 'con carta de resguardo', 'Particular Con Carta de Resguardo',
+	if(wildmatch( GlosaProductoComercial, '*REF*')='0' and (if(RutVendedor >'50000000' and (if(wildmatch( Upper(GlosaProductoComercial), '*CONV*')='1','Con Convenio', 'Sin Convenio'))='Con Convenio' ,'Asociada','Particular'))='Particular' 
+	and (if(CodigoGarante='' or CodigoGarante='-1' or CodigoGarante='0' or CodigoGarante='12','sin carta de resguardo','con carta de resguardo'))= 'sin carta de resguardo', 'Particular Sin Carta de Resguardo')))))) as TipoSolicitud
+	,FechaDesembolso-FechaCreacion as DiasCreacionPago
+	,if(NumeroCarpeta='Solo Piloto' and Pagada='Si', Pagada, Null()) as PagadaPilotosPagados
+	,if(NumeroCarpeta='Solo Piloto' and Pagada='Si', NumeroCarpeta, Null()) as NumeroCarpetaPilotosPagados
+	,if((NumeroCarpeta='Solo Piloto' and Pagada='Si') or (Pagada='No'), NumeroPiloto, Null()) as NumeroPilotoPilotos
+	,if(Pagada='No', Pagada, Null()) as SolicitudNoPagados
+	,if(Pagada='No', GlosaEtapaActual, Null()) as GlosaEtapaActualNoPagados
+	
+FROM [Base QlikView2.TXT] (txt, utf8, embedded labels, delimiter is ';', no eof)
+where isnum(NumeroSolicitud)  and FechaCreacion > '31-10-2007';
+
+
+STORE NombreInmobiliaria, GrupoInmobiliariaProntoPagoMapeado  from VCH into Base Pprueba.txt (ansi, txt, delimiter is ';'); 
+
+
+fin
+
+
+
+
